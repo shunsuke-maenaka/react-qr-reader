@@ -3,5 +3,12 @@
   "extends": ["config:base"],
   "rangeStrategy": "bump",
   "automerge": true,
-  "schedule": ["before 2am on Saturday"]
+  "schedule": ["before 2am on Saturday"],
+  "packageRules": [
+    {
+      "matchUpdateTypes": ["minor", "patch"],
+      "groupName": "all non-major dependencies",
+      "groupSlug": "all-non-major-dependencies"
+    }
+  ]
 }
