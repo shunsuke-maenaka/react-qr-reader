@@ -12,5 +12,4 @@ storybook-static
 
 # yarn
 
-.yarn/*
-!.yarn/releases
+.yarn
