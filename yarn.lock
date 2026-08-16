@@ -2284,7 +2284,7 @@ __metadata:
     "@types/react": ^18.2.22
     "@typescript-eslint/eslint-plugin": ^6.7.2
     "@typescript-eslint/parser": ^6.7.2
-    "@zxing/browser": ^0.1.4
+    "@zxing/browser": ^0.2.1
     "@zxing/library": ^0.20.0
     babel-loader: ^9.1.3
     eslint: ^8.50.0
@@ -5119,17 +5119,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@zxing/browser@npm:^0.1.4":
-  version: 0.1.4
-  resolution: "@zxing/browser@npm:0.1.4"
+"@zxing/browser@npm:^0.2.1":
+  version: 0.2.1
+  resolution: "@zxing/browser@npm:0.2.1"
   dependencies:
     "@zxing/text-encoding": ^0.9.0
   peerDependencies:
-    "@zxing/library": ^0.20.0
+    "@zxing/library": ^0.23.0
   dependenciesMeta:
     "@zxing/text-encoding":
       optional: true
-  checksum: 417eb969d4c6e5f9e45c28d6eabe2bc5c5b4ee274eaf58a7386a82bf09fba2dee8c0403b645eb33540ce2e396d40bd7328e6716ce23ae1a23e6bc01bcd06db89
+  checksum: 542cd184c7fee4dc5cf96b01bfbd2afaa2333e7b4ecb38cbf58ba4422642830d5e99aa8c1914f1a6a16422409215dd20b1ad3a6a203577cc0aaee2c2a395a50e
   languageName: node
   linkType: hard
 
