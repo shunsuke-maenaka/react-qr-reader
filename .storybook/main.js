@@ -1,5 +1,4 @@
-module.exports = {
+export default {
   stories: ['../src/**/*.stories.@(js|jsx|ts|tsx)'],
-  addons: ['@storybook/addon-essentials'],
-  framework: '@storybook/react-webpack5',
+  framework: '@storybook/react-vite',
 };
