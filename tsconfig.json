@@ -3,14 +3,14 @@
     "target": "ES2022",
     "jsx": "react-jsx",
     "module": "ES6",
-    "moduleResolution": "node",
+    "moduleResolution": "Bundler",
     "resolveJsonModule": true,
     "declaration": true,
-    "outDir": "./types",
     "noEmit": true,
+    "rootDir": "./src",
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "strict": true,
-    "skipLibCheck": true,
+    "skipLibCheck": true
   }
 }

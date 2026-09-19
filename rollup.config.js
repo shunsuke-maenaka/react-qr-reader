@@ -26,7 +26,10 @@ export default [
     plugins: [
       cleaner({ targets: ['./dist'] }),
       peerDepsExternal(),
-      resolve({ browser: true, extensions: ['.mjs', '.js', '.json', '.node', '.ts', '.tsx'] }),
+      resolve({
+        browser: true,
+        extensions: ['.mjs', '.js', '.json', '.node', '.ts', '.tsx'],
+      }),
       commonjs(),
       typescript({
         compilerOptions: {
@@ -34,7 +37,7 @@ export default [
           declarationDir: './dist',
           noEmit: false,
         },
-        include: ['src/**/*.ts', 'src/**/*.tsx'],
+        include: ['**/*.ts', '**/*.tsx'],
         exclude: ['**/*.(test|stories).(ts|tsx)'],
       }),
       terser(),

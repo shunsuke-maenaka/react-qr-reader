@@ -38,7 +38,10 @@ export default [
       ...importPlugin.flatConfigs.warnings.rules,
       ...importPlugin.flatConfigs.typescript.rules,
       '@typescript-eslint/explicit-module-boundary-types': 'off',
-      'import/no-unresolved': ['error', { ignore: ['^@storybook/react$'] }],
+      'import/no-unresolved': [
+        'error',
+        { ignore: ['^(?:@storybook/react|storybook/actions)$'] },
+      ],
       'import/order': [
         'error',
         {
