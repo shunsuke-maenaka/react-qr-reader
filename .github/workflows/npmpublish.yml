@@ -7,22 +7,19 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 30
     steps:
-      - uses: actions/checkout@v5
-      # Setup .npmrc file to publish to npm
-      - uses: actions/setup-node@v3
-        with:
-          node-version: '18.x'
-          registry-url: 'https://registry.npmjs.org'
-      - run: yarn install --frozen-lockfile
+      - uses: actions/checkout@v6
+      - uses: jdx/mise-action@v4
+      - run: yarn install --immutable
       - run: yarn run prettier
       - run: yarn run eslint
       - run: yarn run build
+      - run: npm config set //registry.npmjs.org/:_authToken '${NODE_AUTH_TOKEN}'
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
       - run: yarn predeploy
       - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
+        uses: peaceiris/actions-gh-pages@v4
         if: ${{ github.ref == 'refs/heads/main' }}
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}

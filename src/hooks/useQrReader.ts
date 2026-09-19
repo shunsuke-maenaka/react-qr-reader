@@ -25,7 +25,7 @@ export interface UseQrReaderHookProps {
 
 interface UseQrReaderReturn {
   /** Reference to the video element */
-  videoRef: RefObject<HTMLVideoElement> | undefined;
+  videoRef: RefObject<HTMLVideoElement | null>;
   /** Resets the scan result, allowing for a re-scan of the same value */
   resetScanResult: () => void;
 }
@@ -47,8 +47,8 @@ export const useQrReader: UseQrReaderHook = ({
   onError,
 }) => {
   const videoRef = useRef<HTMLVideoElement>(null);
-  const previousScan = useRef<string | null>();
-  const previousError = useRef<Exception | Error | undefined>();
+  const previousScan = useRef<string | null>(null);
+  const previousError = useRef<Exception | Error | undefined>(undefined);
   const qrReader = useRef<BrowserQRCodeReader | null>(null);
   const qrControl = useRef<IScannerControls | undefined>(undefined);
 

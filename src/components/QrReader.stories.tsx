@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { StoryFn } from '@storybook/react';
-import { action } from '@storybook/addon-actions';
+import { action } from 'storybook/actions';
 
 import { ViewFinder } from './ViewFinder';
 import { OnResultFunction, QrReader } from '..';

@@ -55,11 +55,11 @@ export const QrReader: FC<QrReaderProps> = ({
   containerStyle,
   videoStyle,
   ViewFinder,
-  scanDelay,
+  scanDelay = 500,
   className,
   onResult,
   onError,
-  videoId,
+  videoId = 'video',
 }) => {
   const { videoRef, resetScanResult } = useQrReader({
     scanDelay,
@@ -96,7 +96,3 @@ export const QrReader: FC<QrReaderProps> = ({
 };
 
 QrReader.displayName = 'QrReader';
-QrReader.defaultProps = {
-  videoId: 'video',
-  scanDelay: 500,
-};
