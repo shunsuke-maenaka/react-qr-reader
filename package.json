@@ -72,7 +72,7 @@
     "react": "^19.3.0",
     "react-dom": "^19.3.0",
     "rollup": "^4.63.3",
-    "rollup-plugin-cleaner": "^1.0.0",
+    "rollup-plugin-cleaner": "^2.1.0",
     "rollup-plugin-copy": "^3.5.0",
     "rollup-plugin-dts": "^6.5.1",
     "rollup-plugin-peer-deps-external": "^2.2.4",
